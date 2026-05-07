@@ -402,6 +402,18 @@ properties:
             description: |-
               Maximum number of serving instances that this resource should have. Must not be less than minimum instance count. If absent, Cloud Run will calculate
               a default value based on the project's available container instances quota in the region and specified instance size.
+          - name: 'cpuUtilization'
+            type: Double
+            description: |-
+              Target CPU utilization for the service. Accepted values are between 0.1 and 0.95 (inclusive), or 0.0 to disable.
+            validation:
+              function: 'validation.Or(validation.FloatBetween(0, 0.95), validation.Equals(0.0))'
+          - name: 'concurrencyUtilization'
+            type: Double
+            description: |-
+              Target concurrency utilization for the service. Accepted values are between 0.1 and 0.95 (inclusive), or 0.0 to disable.
+            validation:
+              function: 'validation.Or(validation.FloatBetween(0, 0.95), validation.Equals(0.0))'
       - name: 'vpcAccess'
         type: NestedObject
         description: |-

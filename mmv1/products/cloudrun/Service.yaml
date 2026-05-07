@@ -316,6 +316,8 @@ properties:
                     instances](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--add-cloudsql-instances) the Revision connects to.
                   - `run.googleapis.com/cpu-throttling` sets whether to throttle the CPU when the container is not actively serving
                     requests. See https://cloud.google.com/sdk/gcloud/reference/run/deploy#--[no-]cpu-throttling.
+                  - `run.googleapis.com/scaling-concurrency-target` sets the concurrency utilization target (0.1 to 0.95, "disabled", or "default").
+                  - `run.googleapis.com/scaling-cpu-target` sets the CPU utilization target (0.1 to 0.95, "disabled", or "default").
                   - `run.googleapis.com/encryption-key-shutdown-hours` sets the number of hours to wait before an automatic shutdown
                     server after CMEK key revocation is detected.
                   - `run.googleapis.com/encryption-key` sets the [CMEK key](https://cloud.google.com/run/docs/securing/using-cmek)
