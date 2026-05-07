@@ -158,6 +158,10 @@ examples:
       cloud_run_service_name: 'cloudrun-srv'
     test_env_vars:
       project: 'PROJECT_NAME'
+  - name: 'cloud_run_service_scaling'
+    primary_resource_id: 'default'
+    vars:
+      cloud_run_service_name: 'cloudrun-srv'
 virtual_fields:
   - name: 'autogenerate_revision_name'
     description: |

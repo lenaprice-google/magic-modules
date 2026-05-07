@@ -176,6 +176,12 @@ examples:
       'deletion_protection': 'false'
     ignore_read_extra:
       - 'deletion_protection'
+  - name: 'cloudrunv2_service_scaling'
+    primary_resource_id: 'default'
+    vars:
+      cloud_run_service_name: 'cloudrun-service'
+    ignore_read_extra:
+      - 'deletion_protection'
 virtual_fields:
   - name: 'deletion_protection'
     description: |
